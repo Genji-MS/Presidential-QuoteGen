@@ -1,0 +1,45 @@
+<!-- TweenGen templates/base.html -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quote Generator</title>
+        <!-- Latest compiled and minified CSS-->
+        <link rel='stylesheet' href='https://bootswatch.com/4/materia/bootstrap.min.css'>
+    </head>
+    <style>
+            .jumbotron {
+                background: rgba(242, 243, 244, 0.9);
+                border: 0.1em;
+                border-style:solid;
+                border-color:rgb(125, 199, 228)
+            }
+            body { 
+                background: no-repeat center center fixed; 
+                background-size: auto 100%;
+                background-color: rgb(222, 228, 228);
+            }
+            span {
+                font-size: 1.5em;
+                display: inline-block;
+            }
+            tbody tr td{
+                class: "text-primary";
+            }
+            tbody tr{
+                opacity: .9;
+            }
+            table {
+                opacity: .7
+            }   
+
+    </style>
+    <body>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <!-- FOOTER -->
+    </body>
+</html>
+

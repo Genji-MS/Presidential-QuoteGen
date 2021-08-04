@@ -1,0 +1,37 @@
+<!-- TweetGen templates/index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/>Markov sentence generator with quotes from Kaggle, Parade, BrainyQuote, and YourTango
+    <br/>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-8 offset-3">
+                <div class="row">
+                    <div class="col-5 image-container justify-content-md-center">
+                        <img src="static/president.png" width="250px">
+                    </div>
+                    <div class="col-7">
+                        </br></br></br></br></br>
+                        <h4>"I never said that!"</h4>
+                        <p style="font-size:13px; color:#03225C;"> - Presidential Quote Generator</p>
+                        </br>
+                        <form action= '/'>
+                            <button type="submit" style="padding: .8rem;">Generate Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <span>
+            <span>"</span>
+            {% for word in f_wordlist %}
+                <span class={{ word[1] }}> {{ word[0] }} </span>
+            {% endfor %}
+            <span>"</span>
+        </span>        
+        <hr class="my-4">
+    </div>
+
+{% endblock %}
