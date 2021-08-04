@@ -7,14 +7,14 @@ app = Flask(__name__)
 
 #PARSE INDIVIDUAL SCRIPTS AND COLOR CODE THEM FOR OUR OUTPUT
 
-parsed_text = parse_file('Quotes1') #white
-markov = markov_tokenise(parsed_text, 'default')
+parsed_text = parse_file('Quotes1') #black default
+markov = markov_tokenise(parsed_text, '')
 
 parsed_text = parse_file('BrainyQuote') #blue
-markov = markov_tokenise(parsed_text, 'default', markov)
+markov = markov_tokenise(parsed_text, 'blue', markov)
 
-parsed_text = parse_file('Funny') #blue
-markov = markov_tokenise(parsed_text, 'default', markov)
+parsed_text = parse_file('Funny') #pink
+markov = markov_tokenise(parsed_text, 'pink', markov)
 
 parsed_text = None
 
