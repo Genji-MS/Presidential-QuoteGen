@@ -1,10 +1,10 @@
 # Presidential Quote Generator
 Generates quotes. Sometimes nonsenese, sometimes gold
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/demo.png" height="350"> 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote1.png" height="60">
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote2.png" height="60">
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote3.png" height="60">
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote4.png" height="60">
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/demo.png" width="600"> 
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote1.png" width="600">
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote2.png" width="600">
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote3.png" width="600">
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/quote4.png" width="600">
 
 
 
@@ -23,10 +23,9 @@ http://127.0.0.1:5000/
 
 
 ## Cleaning Data
-Presidential quotes were pulled from Kaggle, Parade, BrainyQuote, and YourTango
-Each of these pages had custom regex applied to remove Presidential indentifying information, webpage garbage, duplicates, and advertisements.
+Presidential quotes were pulled from Kaggle, Parade, BrainyQuote, and YourTango. Each of these pages had custom regex applied to remove Presidential indentifying information, webpage garbage, duplicates, and advertisements.
 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/regex.png" height="350"> 
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/regex.png" width="600"> 
 
 
 
@@ -35,8 +34,8 @@ The code uses a 2nd order Markov chain to create a dictionary of words that natu
 
 In this example we start with the words "Don't worry". The next step uses our 2nd word 'worry' and looks at all of the pairs that begin with worry. In this case, "worry over" and "worry when". Our random function selected the prior. The following two words didn't have any additional options to select from. This continues to the end, selecting randomly where there were multiple options available until "Congress. STOP". The "STOP" word triggers the end of our quote.
 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/dictionary_walk.png" height="90"> 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/dictionary.png" height="350"> 
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/dictionary_walk.png" width="600"> 
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/dictionary.png" width="600"> 
 
 
 ## Configuration
@@ -46,11 +45,11 @@ Replacing, adding, editing the quotes used in our Markov Dictionary are specifie
 
 There is the built in option to color code words based on their source text. It is not used in the online demo
 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/colorcoded.png" height="60">
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/colorcoded.png" width="600">
 
 Simply specify after the file name, one of the valid color choices as shown above. Our colors are specified (and limited) by the BootStrap theme.
 
-<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/colorcoded_color.png" height="250"> 
+<img src="https://github.com/Genji-MS/Presidential-QuoteGen/blob/main/static/colorcoded_color.png" height="200"> 
 
 
 ## Limitations of the Markov Chain
